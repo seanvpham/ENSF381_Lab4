@@ -8,10 +8,45 @@
     <script> 
 
         let classRoster = ['Alice', 'Tom', 'Charlie', 'Diana', 'Evan'];
-        newclass = classRoster.push('Fiona', 'Nancy');
+        classRoster.push('Fiona', 'Nancy');
         classRoster.shift();
 
-        console.log(classRoster.toString(), classRoster.length)
+        console.log(classRoster.toString(), classRoster.length);
+
+        let classInformation = {
+            className: 'ENSF381: Full-Stack Web Development',
+            instructor: 'Dr. Smith',
+            students: classRoster,
+            details: {
+                semester: 'Winter',
+                year: 2025
+            }
+        };
+
+        classInformation.schedule = ['Monday', 'Wednesday', 'Friday'];
+
+        classInformation.instructor = 'Dr. Abdellatif';
+
+        console.log('Class Name:', classInformation.className);
+        console.log('Instructor:', classInformation.instructor);
+        console.log('Students:', classInformation.students);
+
+        console.log('Semester:', classInformation.details.semester);
+
+        console.log('Updated Class Information:', classInformation);
+
+        let { className, students } = classInformation;
+        console.log('Destructured Class Name:', className);
+        console.log('Destructured Students:', students);
+
+        let { semester, year } = classInformation.details;
+        console.log('Destructured Semester:', semester);
+        console.log('Destructured Year:', year);
+
+        let [student1, student2, ...remainingStudents] = classRoster;
+        console.log('Student 1:', student1);
+        console.log('Student 2:', student2);
+        console.log('Remaining Students:', remainingStudents);
 
     </script> 
 </body> 
