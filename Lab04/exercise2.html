@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+      <html>
+      <head>
+<title>Lab4 – Exercise 1</title> </head>
+<body>
+<h1>JavaScript Lab</h1> 
+<script>
+//Step1:
+        //function add(a, b) {
+        //    return a + b;
+        //}
+//Step2:       
+        //function add(a, b=0) {
+        //        return a + b;
+         //   }
+//Step1:
+        //function subtract(a, b) {
+        //  return a - b;
+        //}
+//Step2: 
+       //function subtract(a, b=0) {
+        //        return a - b;
+        //    }
+//Step1:
+        //function multiply(a, b) {
+        //  return a * b;
+        //}
+//Step2: 
+        //function multiply(a, b=1) {
+        //        return a * b;
+        //    }
+//Step1:
+        //function divide(a, b) {
+        //return b!== 0 ? a / b : "Not allowed to divide with zero";
+        //}  
+//Step2:   
+        //function divide(a, b=1) {
+        //        return a / b;
+        //    }
+
+
+
+
+        function addDefault(a, b = 0) {
+            return a + b;
+        }
+
+        function subtractDefault(a, b = 0) {
+            return a - b;
+        }
+
+        console.log(addDefault(5));
+        console.log(addDefault(5, 3));
+        console.log(subtractDefault(10));
+        console.log(subtractDefault(10, 4));
+
+        const add = (a, b) => a + b;
+        const subtract = (a, b) => a - b;
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => b !== 0 ? a / b: "Not allowed to divide with zero";
+   
+
+
+        function calculator(a, b, callback) {
+            return callback(a, b);
+        }
+
+        console.log(calculator(5, 4, add));        
+        console.log(calculator(3, 3, multiply));        
+    </script>
+</body>
+</html>
+
+
+
